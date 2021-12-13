@@ -1,0 +1,17 @@
+* {
+    font-size: 2rem;
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
