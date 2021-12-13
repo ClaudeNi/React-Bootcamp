@@ -1,0 +1,11 @@
+.App {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    padding: 1rem;
+    border: 1px solid #000;
+    width: fit-content;
+    box-shadow: #000 5px 10px 10px;
+}
