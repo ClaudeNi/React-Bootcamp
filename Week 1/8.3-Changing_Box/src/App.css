@@ -1,0 +1,19 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 500px;
+  width: 500px;
+  transition: all 1s ease-in-out;
+}
+
+.circle {
+  height: 500px;
+  width: 500px;
+  border-radius: 100%;
+  transition: all 1s ease-in-out;
+}
