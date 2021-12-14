@@ -1,0 +1,22 @@
+.App {
+  height: 100vh;
+}
+
+.box {
+  width: fit-content;
+  margin: 1rem;
+  transform: translateX(-1000px);
+}
+
+.box-animation {
+  animation: slide 1s forwards ease-in-out;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-501px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
