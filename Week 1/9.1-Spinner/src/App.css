@@ -23,10 +23,6 @@
   animation: spinner 0.7s linear infinite;
 }
 
-.display-none {
-  display: none;
-}
-
 @keyframes spinner {
   to {
     transform: rotate(360deg);

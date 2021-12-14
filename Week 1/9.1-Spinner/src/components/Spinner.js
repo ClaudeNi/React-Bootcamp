@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
 
-const Spinner = (props) => {
+const Spinner = () => {
   return (
-    <div className={props.classes}>
+    <div className="container">
       <div className="spinner"></div>
     </div>
   );
