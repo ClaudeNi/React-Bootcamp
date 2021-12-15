@@ -7,9 +7,8 @@ class App extends React.Component {
   state = { showForm: true, showResult: false, submitForm: false };
 
   flipShowcase = () => {
-    this.setState({
-      // showForm: !this.state.showForm,
-      showResult: !this.state.showResult,
+    this.setState((state) => {
+      return { showResult: !state.showResult };
     });
   };
 
