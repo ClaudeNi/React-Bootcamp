@@ -1,0 +1,19 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories {
+  display: flex;
+}
+
+.btn {
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
