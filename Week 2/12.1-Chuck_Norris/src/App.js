@@ -4,7 +4,14 @@ import axios from "axios";
 import "./App.css";
 
 class App extends React.Component {
-  state = { joke: "" };
+  state = { categories: [], joke: "" };
+
+  async componentDidMount() {
+    const categoriesData = await axios.get(
+      "https://api.chucknorris.io/jokes/categories"
+    );
+    this.setState({ categories: categoriesData.data });
+  }
 
   handleClick = async (text) => {
     const results = await axios.get("https://api.chucknorris.io/jokes/random", {
@@ -17,16 +24,17 @@ class App extends React.Component {
     const results = await axios.get("https://api.chucknorris.io/jokes/random");
     this.setState({ joke: results.data.value });
   };
+
+  displayCategories = () => {
+    return this.state.categories.map((name, i) => {
+      return <Btn key={i} text={name} clickHandle={this.handleClick} />;
+    });
+  };
   render() {
     return (
       <div className="App">
         <Btn text="random" clickHandle={this.handleRandomClick} />
-        <div className="categories">
-          <Btn text="animal" clickHandle={this.handleClick} />
-          <Btn text="food" clickHandle={this.handleClick} />
-          <Btn text="money" clickHandle={this.handleClick} />
-          <Btn text="science" clickHandle={this.handleClick} />
-        </div>
+        <div className="categories">{this.displayCategories()}</div>
         {this.state.joke}
       </div>
     );
