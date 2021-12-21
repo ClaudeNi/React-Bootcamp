@@ -5,16 +5,6 @@ class ToDoList extends React.Component {
     state = { list: [], isAddingItem: false };
 
     addItem = () => {
-        // if (this.state.isAddingItem) {
-        // const newList = this.state.list;
-        // newList.push({
-        //     task: "item",
-        //     edit: false,
-        //     button1: "Edit",
-        //     button2: "Delete",
-        // });
-        // this.setState({ list: newList, isAddingItem: false });
-        // } else {
         if (!this.state.isAddingItem) {
             const newList = this.state.list;
             newList.push({
@@ -25,13 +15,20 @@ class ToDoList extends React.Component {
             });
             this.setState({ list: newList, isAddingItem: true });
         }
-
-        // }
     };
 
-    handleEdit = ({ target: { id } }, { current }) => {
+    handleEdit = (
+        {
+            target: {
+                attributes: {
+                    itemID: { value },
+                },
+            },
+        },
+        { current }
+    ) => {
         const newList = this.state.list;
-        const newItem = newList[id];
+        const newItem = newList[value];
         if (current && current.value !== "") {
             if (this.state.isAddingItem || newItem.edit) {
                 newItem.task = current.value;
@@ -45,23 +42,29 @@ class ToDoList extends React.Component {
             newItem.button2 = "Delete";
         }
         newItem.edit = !newItem.edit;
-        newList[id] = newItem;
-        newList[id] = newItem;
+        newList[value] = newItem;
+        newList[value] = newItem;
         this.setState({
             list: newList,
             isAddingItem: false,
         });
     };
 
-    deleteItem = ({ target: { id } }) => {
+    deleteItem = ({
+        target: {
+            attributes: {
+                itemID: { value },
+            },
+        },
+    }) => {
         const newList = this.state.list;
-        const newItem = newList[id];
+        const newItem = newList[value];
         if (newItem.edit && !this.state.isAddingItem) {
             newItem.edit = false;
             newItem.button1 = "Edit";
             newItem.button2 = "Delete";
         } else {
-            newList.splice(id, 1);
+            newList.splice(value, 1);
         }
         this.setState({ list: newList, isAddingItem: false });
     };

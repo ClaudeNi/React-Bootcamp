@@ -41,6 +41,7 @@ class ListItem extends React.Component {
                 <div className="list-item-right">
                     <div
                         id={this.props.id}
+                        itemID={this.props.id}
                         className="btn"
                         onClick={this.handleButton1}
                     >
@@ -48,6 +49,7 @@ class ListItem extends React.Component {
                     </div>
                     <div
                         id={this.props.id}
+                        itemID={this.props.id}
                         className="btn"
                         onClick={this.props.handleButton2}
                     >
