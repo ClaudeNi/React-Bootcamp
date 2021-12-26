@@ -1,0 +1,29 @@
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #c3c3c3;
+}
+
+.converter {
+    min-width: 22%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    border: 1px #000 solid;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.converter input {
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.converter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
