@@ -25,6 +25,10 @@
     color: #fff;
 }
 
+.completed {
+    text-decoration: line-through #ff0000;
+}
+
 .btn {
     cursor: pointer;
 }
