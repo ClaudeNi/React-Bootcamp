@@ -1,0 +1,15 @@
+.App {
+    min-height: 100vh;
+}
+
+.text {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-btn {
+    color: blue;
+    cursor: pointer;
+}
