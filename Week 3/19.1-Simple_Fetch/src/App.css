@@ -1,0 +1,14 @@
+.App {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.movie-display {
+    font-size: 2rem;
+}
+
+.movie-item-text {
+    font-weight: 600;
+    color: dodgerblue;
+}
